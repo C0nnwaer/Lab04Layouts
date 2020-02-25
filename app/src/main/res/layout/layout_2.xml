@@ -19,20 +19,35 @@
         android:id="@+id/mid_left"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="250dp"
         android:background="#00ff00"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/mid_right"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/mid_right"/>
+        app:layout_constraintBottom_toTopOf="@id/hor_mid"
+        app:layout_constraintRight_toLeftOf="@id/ver_mid"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ver_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
 
     <TextView
         android:id="@+id/mid_right"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#00ff00"
-        app:layout_constraintLeft_toRightOf="@id/mid_left"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mid_left"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintLeft_toRightOf="@id/ver_mid"
+        app:layout_constraintTop_toBottomOf="@id/hor_mid"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
