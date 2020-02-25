@@ -5,13 +5,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkGrey"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".25"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25"
+        />
+
+    <TextView
+        android:id="@+id/big_view"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        android:text="@string/textview"
+        app:layout_constraintBottom_toTopOf="@id/horizontal"
+        app:layout_constraintLeft_toRightOf="@+id/vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        android:text="@string/button"
+        app:layout_constraintTop_toBottomOf="@id/big_view"
+        app:layout_constraintLeft_toRightOf="@id/vertical"
+        app:layout_constraintBottom_toTopOf="@id/horizontal" />
+
+    <TextView
+        android:id="@+id/top_small"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        android:text="@string/view"
+        app:layout_constraintLeft_toRightOf="@+id/vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bottom_small"
+        />
+
+    <TextView
+        android:id="@+id/bottom_small"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        android:text="@string/view"
+        app:layout_constraintLeft_toRightOf="@+id/vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_small"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
