@@ -7,12 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/corner"
+        android:background="#00ff00"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".5"
+        app:layout_constraintGuide_percent=".6"
+        />
+
+    <TextView
+        android:id="@+id/left"
+        android:background="#00ff00"
+        android:layout_width="150dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toTopOf="@id/horizon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias=".22"
+        />
+
+    <TextView
+        android:id="@+id/big_middle"
+        android:background="@color/darkGrey"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:layout_constraintLeft_toLeftOf="@id/small_middle"
+        app:layout_constraintRight_toRightOf="@id/small_middle"
+        app:layout_constraintTop_toTopOf="@id/small_middle"
+        app:layout_constraintBottom_toBottomOf="@id/small_middle"
+        />
+
+    <TextView
+        android:id="@+id/right"
+        android:background="@color/colorPrimary"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".66"
+        />
+
+    <TextView
+        android:id="@+id/small_middle"
+        android:background="#00ff00"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toTopOf="@id/horizon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias=".65"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
