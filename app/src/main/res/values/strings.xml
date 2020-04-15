@@ -5,4 +5,6 @@
     <string name="view">View</string>
     <string name="long_text">hi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\n
     hi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\nhi\n\n\nbye\n\n\n</string>
+    <string name="choices">choices</string>
+    <string name="text_view">Text View</string>
 </resources>

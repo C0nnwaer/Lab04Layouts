@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2"/>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#00ff00"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nested_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            app:layout_constraintLeft_toLeftOf="@id/nested_layout"
+            app:layout_constraintRight_toRightOf="@id/nested_layout"
+            app:layout_constraintTop_toTopOf="@id/nested_layout" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/nested_layout"
+            app:layout_constraintRight_toRightOf="@id/nested_layout"
+            app:layout_constraintTop_toBottomOf="@+id/button">
+
+            <LinearLayout
+                android:id="@+id/inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/scroll"
+                app:layout_constraintRight_toRightOf="@id/scroll">
+
+                <CheckBox
+                    android:id="@+id/check_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toTopOf="@id/inner"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_1"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_2"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_3"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_4"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_5"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_6"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_7"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_8"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_9"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_10"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_11"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_12"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_13"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_14"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_15"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+                <CheckBox
+                    android:id="@+id/check_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choices"
+                    app:layout_constraintTop_toBottomOf="@id/check_16"
+                    app:layout_constraintRight_toRightOf="@id/inner"
+                    app:layout_constraintLeft_toLeftOf="@id/inner"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
